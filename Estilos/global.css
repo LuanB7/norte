@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Coolvetica';
+    src: url(Fontes/coolvetica\ rg.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Coolvetica', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 0.1em;
+}
+
+header {
+    height: 70px;
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 36, 63, 0.15);
+
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+
+    z-index: 10;
+}
+
+header nav {
+    display: flex;
+    margin-left: 7%;
+    margin-right: 7%;
+    width: calc(100% - 14%);
+
+    justify-content: space-between;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+header nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+
+    margin-left: 10px;
+
+    color: rgba(0, 8, 12, 0.7);
+    transition: 0.4s;
+
+    
+    padding: 9px 18px;
+    border-radius: 5px;
+}
+
+    header nav ul li a:hover {
+        color: rgb(7, 93, 223);
+        background-color: rgba(7, 93, 223, 0.08);
+    }
+
+
+.header-logo {
+    font-size: 24px;
+    color: rgba(0, 8, 12, 0.9);
+    display: flex;
+    align-items: center;
+}
+
+.header-logo i {
+    margin-right: 7px;
+    color: rgb(7, 93, 223);
+}
+
+/* Global • Seções */
+
+.secao p {
+    line-height: 1.618em;
+    
+}
+
+.dentro-secao {
+    margin-left: 7%;
+    margin-right: 7%;
+    width: calc(100% - 14%);
+}
