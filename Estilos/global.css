@@ -24,6 +24,9 @@ header {
     width: 100%;
 
     z-index: 10;
+
+
+    animation: toDown 800ms;
 }
 
 header nav {
@@ -80,6 +83,8 @@ header nav ul li a {
 
 .secao p {
     line-height: 1.618em;
+
+    
     
 }
 
@@ -87,4 +92,67 @@ header nav ul li a {
     margin-left: 7%;
     margin-right: 7%;
     width: calc(100% - 14%);
+}
+
+
+/*Anims*/
+
+@keyframes toDown {
+    0% {
+        margin-top: -10%;
+        opacity: 0;
+    }
+
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+/*header-logo-anim*/
+.header-logo i {
+    animation: HLi 1s;
+    animation-delay: 700ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.header-logo-text {
+    animation: HLt 1s;
+    transform: translateX(-30%);
+    opacity: 0;
+    animation-delay: 900ms;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes HLi {
+    0% {
+        opacity: 0;
+        transform: rotate(-360deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+
+
+@keyframes HLt {
+    0% {
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+
+
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
