@@ -1,10 +1,69 @@
-header ul li a {
-    display: none;
+@media screen and (max-width: 1030px) {
+    .servicos-container {
+        flex-direction: column;
+    }
+
+    .servico-box {
+        width: 100%;
+
+        margin-bottom: 30px;
+    }
 }
 
-.secao h1 {
-    font-size: 30px;
+
+
+
+@media screen and (max-width: 800px) {
+    header ul li a {
+        display: none;
+    }
+    
+    .secao h1 {
+        font-size: 30px;
+    }
+
+    /*Seção 1*/
+    .secao-1 p {
+        font-size: 19px;
+    }
+
+
+    /*Seção 2*/
+
+    .secao-2 h1 span {
+        min-width: min-content;
+        min-height: min-content;
+        background-color: transparent;
+    }
+
+    .servico-box {
+        width: 100%;
+        height: 120px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    .servico-box-conteudo {
+        margin: 10px;
+    }
+
+    .servico-box-conteudo h2 {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .servico-box-conteudo p {
+        font-size: 13px;
+    }
+
+    .servico-box-icone {
+        height: 70%;
+        margin-left: 17px;
+
+
+        font-size: 45px;
+        
+    }
 }
-.secao-1 p {
-    font-size: 19px;
-}
+
