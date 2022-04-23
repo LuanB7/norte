@@ -140,7 +140,7 @@ h1 {
 
 .secao-2 h1 {
     color: rgba(0, 8, 12, 0.7);
-    text-align: center;
+    
 
     margin-bottom: 40px;
 }
@@ -166,8 +166,7 @@ h1 {
     
 }
 
-.secao-2 h1:nth-last-child(2) {
-    text-align: left;
+.secao-2 .nossos-servicos-h1 {
     margin-top: 50px;
     font-size: 30px;
 
@@ -200,13 +199,14 @@ h1 {
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 60px;
+            font-size: 50px;
            
-
-            height: 100%;
             aspect-ratio: 1 / 1;
             background-color: rgba(7, 93, 223, 0.2);
             border-radius: 10px;
+
+            height: 70%;
+            margin-left: 17px;
         }
 
         .servico-box-icone i {
@@ -233,6 +233,18 @@ h1 {
             font-size: 17px;
             color: rgba(0, 42, 77, 0.7);
         }
+
+
+        .servico-box {
+
+            height: 140px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+        }
+        
+        
+
 
 
 
