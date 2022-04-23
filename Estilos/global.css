@@ -79,6 +79,10 @@ header nav ul li a {
     color: rgb(7, 93, 223);
 }
 
+.header-menu-mobile-button {
+    display: none;
+}
+
 /* Global • Seções */
 
 .secao p {
