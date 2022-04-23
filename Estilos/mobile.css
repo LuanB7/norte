@@ -34,6 +34,10 @@
         border-radius: 50%;
 
         font-size: 22px;
+        opacity: 0;
+        animation: toOpacity 1s;
+        animation-delay: 800ms;
+        animation-fill-mode: forwards;
         
     }
 
