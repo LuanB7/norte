@@ -80,8 +80,6 @@
         border-radius: 7px;
         border: none;
 
-        background-color: rgb(245, 248, 253);
-
         overflow: hidden;
     }
 
@@ -125,9 +123,12 @@
 
         .menu-mobile ul li a:not(.menu-mobile-modo-desemp-a) {
             display: block;
-            box-shadow: 0px 0px 20px rgba(1, 41, 75, 0.07);
-            background-color: white;
+            font-weight: normal;
+            
             padding-left: 20px;
+
+            background-color: rgba(7, 93, 223, 0.12);
+            color: rgb(7, 93, 223);
         }
 
             .menu-mobile ul li a:not(.menu-mobile-modo-desemp-a):hover {
