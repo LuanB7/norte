@@ -1,25 +1,27 @@
 
+
+
+// NÃO USADO • MODO DESEMPENHO QUE DÁ RELOAD AO ATIVAR • ATRAPALHA EM ALGUNS CASOS
+
+
+
 /* Verificando se o LocalStorage "modoDesempenho" é igual a 'ativado' ou 'desativado' para trabalhar com valores booleanos (para facilitar)*/
 
 //Logo `if (localStorage.getItem('modoDesempenho') == 'ativado')` é simnplificado em: `if (modo_desempenho == true)`
 
-
 if (localStorage.getItem('modoDesempenho') == 'ativado') {
-    modo_desempenho = true;
+    var modo_desempenho = true;
 } else if (localStorage.getItem('modoDesempenho') == 'desativado') {
-    modo_desempenho = false;
-};
-
-
+    var modo_desempenho = false;
+}
 
 
 /* Verificando se o modo desempenho está ativado para dar estilo ao interruptor */
 function verificarModoDesempenho(interrup, interrupBall) {
     if (modo_desempenho == false) {  
-        interrupBall.style.transform = 'translateX(0%)';
-
+        interrup.style.justifyContent = 'left';
     } else {
-        interrupBall.style.transform = 'translateX(100%)';
+        interrup.style.justifyContent = 'right';
     }
 }
 
@@ -33,54 +35,20 @@ verificarModoDesempenho.apply(null, botaoModoDesempenhoDados);
 
 
 
-// Verificar qual o localStorage é o atual e setar o outro ao clicar no interruptor
-/*function mdVerificarLocalStorageEResetar() {
-    if (localStorage.getItem('modoDesempenho') == 'ativado') {
-        localStorage.setItem('modoDesempenho', 'desativado');
-        var modo_desempenho = true;
-    } else if (localStorage.getItem('modoDesempenho') == 'desativado') {
-        localStorage.setItem('modoDesempenho', 'ativado');
-        var modo_desempenho = false;
-    }
-}*/
-
-
-
 /* Verificando se o modo desempenho está ativado para dar estilo ao interruptor AO CLICAR NELE */
 function ativEdesativModoDesempenho(interrup, interrupBall) {
 
-    if (localStorage.getItem('modoDesempenho') == 'ativado') {
-        modo_desempenho = true;
-    } else if (localStorage.getItem('modoDesempenho') == 'desativado') {
-        modo_desempenho = false;
-    };
-
     if (modo_desempenho == false) {
-        modo_desempenho = true;
         localStorage.setItem('modoDesempenho', 'ativado');
-
-        interrupBall.style.transform = 'translateX(100%)';
+        interrup.style.justifyContent = 'right';
 
         console.log('Modo desempenho ativado');
-      
-        
-    } else if (modo_desempenho == true) {
-        modo_desempenho = false;
+    } else {
         localStorage.setItem('modoDesempenho', 'desativado');
-
-        interrupBall.style.transform = 'translateX(0%)';
+        interrup.style.justifyContent = 'left';
 
         console.log('Modo desempenho desativado');
-
-    };
-
-
-
-
-
-    modoDesempenho();
-
-    
+    }
 }
 
 //Dados para a função • de forma separada em um array para facilitar • foi resetado mas não tem problema
@@ -122,7 +90,7 @@ function modoDesempenho() {
                 },
                 move: {
                 enable: true,
-                speed: 3,
+                speed: 6,
                 direction: "none",
                 random: false,
                 straight: false,
@@ -216,6 +184,3 @@ function modoDesempenho() {
 }
 
 modoDesempenho();
-
-
-

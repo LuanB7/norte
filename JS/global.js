@@ -24,6 +24,8 @@ function menuMobile(botao, checkbox, menu) {
                 botao.style.transform = 'rotate(-180deg)';
 
                 document.getElementById('menu-mobile-back').style.opacity = '1';
+                document.getElementById('menu-mobile-back').style.visibility = 'visible';
+                
                 
             } else {
 
@@ -34,6 +36,7 @@ function menuMobile(botao, checkbox, menu) {
                 botao.style.transform = 'rotate(0)';
 
                 document.getElementById('menu-mobile-back').style.opacity = '0';
+                document.getElementById('menu-mobile-back').style.visibility = 'hidden';
             }
             
         }
