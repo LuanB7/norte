@@ -1,26 +1,60 @@
 
+/* Verificando se o LocalStorage "modoDesempenho" é igual a 'ativado' ou 'desativado' para trabalhar com valores booleanos (para facilitar)*/
 
-
-
-
-
-
-
-localStorage.setItem('modoDesempenho', 'desativado');
+//Logo `if (localStorage.getItem('modoDesempenho') == 'ativado')` é simnplificado em: `if (modo_desempenho == true)`
 
 if (localStorage.getItem('modoDesempenho') == 'ativado') {
     var modo_desempenho = true;
-} else {
+} else if (localStorage.getItem('modoDesempenho') == 'desativado') {
     var modo_desempenho = false;
 }
 
 
+/* Verificando se o modo desempenho está ativado para dar estilo ao interruptor */
+function verificarModoDesempenho(interrup, interrupBall) {
+    if (modo_desempenho == false) {  
+        interrup.style.justifyContent = 'left';
+    } else {
+        interrup.style.justifyContent = 'right';
+    }
+}
 
+//Dados para a função • de forma separada em um array para facilitar
+var botaoModoDesempenhoDados = [document.getElementById('md-interruptor'), document.getElementById('md-interruptor-ball')];
+
+//Chamando função
+verificarModoDesempenho.apply(null, botaoModoDesempenhoDados);
+
+
+
+
+
+/* Verificando se o modo desempenho está ativado para dar estilo ao interruptor AO CLICAR NELE */
+function ativEdesativModoDesempenho(interrup, interrupBall) {
+
+    if (modo_desempenho == false) {
+        localStorage.setItem('modoDesempenho', 'ativado');
+        interrup.style.justifyContent = 'right';
+
+        console.log('Modo desempenho ativado');
+    } else {
+        localStorage.setItem('modoDesempenho', 'desativado');
+        interrup.style.justifyContent = 'left';
+
+        console.log('Modo desempenho desativado');
+    }
+}
+
+//Dados para a função • de forma separada em um array para facilitar • foi resetado mas não tem problema
+var botaoModoDesempenhoDados = [document.getElementById('md-interruptor'), document.getElementById('md-interruptor-ball')];
+
+
+//Alterações de estilo causadas pelo modo desempenho
 
 function modoDesempenho() {
-    if (modo_desempenho == false) {
+    if (modo_desempenho == false) { //Se o modo desempenho não estiver ativado
         
-        //Particulas seção 1
+        //Particulas seção 1 • Visíveis
         particlesJS("particles-container", {
             particles: {
                 number: { value: 70, density: { enable: true, value_area: 800 } },
@@ -76,24 +110,12 @@ function modoDesempenho() {
             },
             retina_detect: true
             });
-            var count_particles, stats, update;
-            stats = new Stats();
-            stats.setMode(0);
-            stats.domElement.style.position = "absolute";
-            stats.domElement.style.left = "0px";
-            stats.domElement.style.top = "0px";
-            document.body.appendChild(stats.domElement);
-            count_particles = document.querySelector(".js-count-particles");
-            update = function () {
-            stats.begin();
-            stats.end();
-            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-            }
-            requestAnimationFrame(update);
-        };
-        requestAnimationFrame(update);
-    } else {
+
+    }
+    
+    else { //Se o modo desempenho estiver ativado
+
+        //Particulas seção 1 • Não visíveis
         particlesJS("particles-container", {
             particles: {
                 number: { value: 0, density: { enable: false, value_area: 0 } },
@@ -149,23 +171,7 @@ function modoDesempenho() {
             },
             retina_detect: true
             });
-            var count_particles, stats, update;
-            stats = new Stats();
-            stats.setMode(0);
-            stats.domElement.style.position = "absolute";
-            stats.domElement.style.left = "0px";
-            stats.domElement.style.top = "0px";
-            document.body.appendChild(stats.domElement);
-            count_particles = document.querySelector(".js-count-particles");
-            update = function () {
-            stats.begin();
-            stats.end();
-            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-            }
-            requestAnimationFrame(update);
-        };
-        requestAnimationFrame(update);
+
 
 
     }

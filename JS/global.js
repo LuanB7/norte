@@ -1,3 +1,17 @@
+
+// Abrir Link
+function abrirLink(delay, link) {
+    setTimeout(
+        function(){
+            window.location = link;
+        }
+        
+    , delay*1000);
+};
+
+
+
+// Menu Mobile
 function menuMobile(botao, checkbox, menu) {
     setTimeout(
         function() {
