@@ -20,7 +20,8 @@
                 <li><a href="">Sobre nós</a></li>
                 <li><a href="">Serviços</a></li>
                 <li><a href="">Começar</a></li>
-                <label for="" class="header-menu-mobile-button"><i class="fas fa-angle-up"></i></label>
+                <label for="menu-mobile-check" class="header-menu-mobile-button" onclick="menuMobile.apply(null, menuMobileDados)" ><i class="fas fa-angle-up" id="menu-mobile-button"></i></label>
+                <input type="checkbox" id="menu-mobile-check" style="display: none;">
             </ul>
             
         </nav>
@@ -97,21 +98,32 @@
         </div class="secao-2-h1">
     </section>
 
-    <div class="menu-mobile-back"></div>
+    <div class="menu-mobile-back" id="menu-mobile-back"></div>
 
-    <div class="menu-mobile">
+    <div class="menu-mobile" id="menu-mobile">
         <nav>
             <ul>
                 <li><a href="">Sobre nós</a></li>
                 <li><a href="">Serviços</a></li>
                 <li><a href="">Começar</a></li>
                 <hr>
-                <li><a class="menu-mobile-modo-desemp-a">Modo de desempenho</a></li>
+                <li>
+                    <a class="menu-mobile-modo-desemp-a">
+                        Modo de desempenho
+
+                        <label for="modo-desempenho-check" class="md-interruptor" id="md-interruptor">
+                            <div class="md-interruptor-ball" id="md-interruptor-ball"></div>
+                        </label>
+
+                        <input type="checkbox" id="modo-desempenho-check" style="display: none;">
+                    </a>
+                </li>
             </ul>
         </nav>
        
     </div>
     
+    <script src="JS/global.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="JS/modo-desempenho.js"></script>
 

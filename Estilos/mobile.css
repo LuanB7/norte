@@ -1,3 +1,10 @@
+@media screen and (max-width: 1190px) {
+    .menu-mobile ul li .menu-mobile-modo-desemp-a  {
+        font-size: 14px;
+    }
+}
+
+
 @media screen and (max-width: 1030px) {
     .servicos-container {
         flex-direction: column;
@@ -77,20 +84,24 @@
         left: 7%;
         right: 7%;
         top: 100px;
-        border-radius: 7px;
         border: none;
 
         overflow: hidden;
+
+
     }
 
         .menu-mobile-back {
             position: fixed;
             width: 100%;
             height: 100%;
-            background-color: rgba(1, 6, 17, 0.7);
+            background-color: rgba(3, 11, 29, 0.5);
             top: 0;
             left: 0;
             z-index: 2;
+
+            opacity: 0;
+            transition: 0.4s;
         }
 
         .menu-mobile ul li a {
@@ -117,8 +128,9 @@
             display: block;
             width: 120%;
             margin-left: -9%;
-            border: 1px solid rgba(1, 41, 75, 0.15);
-            margin-bottom: 10px;
+            border: 0;
+            border-top: 1px solid rgba(1, 41, 75, 0.15);
+            margin-bottom: 20px;
         }
 
         .menu-mobile ul li a:not(.menu-mobile-modo-desemp-a) {
@@ -135,6 +147,25 @@
                 color: rgb(7, 93, 223);
                 
             }
+
+        .menu-mobile ul li .menu-mobile-modo-desemp-a  {
+            font-size: 19px;
+        }
+
+        /* Modo desempenho interruptor */
+
+        .md-interruptor {
+          
+            width: 46px;
+            height: 20px;
+            padding: 5px;
+        }
+        
+        .md-interruptor-ball {
+            width: 20px;
+            height: 20px;
+        }
+        
         
     
 

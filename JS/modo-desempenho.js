@@ -6,7 +6,6 @@
 
 
 
-
 localStorage.setItem('modoDesempenho', 'desativado');
 
 if (localStorage.getItem('modoDesempenho') == 'ativado') {
