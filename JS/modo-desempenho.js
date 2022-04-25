@@ -3,7 +3,7 @@
 
 //Logo `if (localStorage.getItem('modoDesempenho') == 'ativado')` é simnplificado em: `if (modo_desempenho == true)`
 
-if (LocalStorage.getItem('modoDesempenho') == null) {
+if (localStorage.getItem('modoDesempenho') == null) {
     localStorage.setItem('modoDesempenho', 'desativado');
 }
 
